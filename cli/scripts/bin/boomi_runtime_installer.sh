@@ -56,8 +56,7 @@ sudo apt-get install -y jq
 sudo apt-get install -y libxml2-utils
 mkdir -p  /home/$USR/boomi/boomicicd
 cd /home/$USR/boomi/boomicicd
-#git clone https://${GitUserName}:${GitPAT}/UnitedTechnoCloud/boomicicd-cli.git
-git clone https://github.com/TommyJohnWear/boomicicd-cli
+git clone https://github.com/bombas/boomicicd-cli
 cd /home/$USR/boomi/boomicicd/boomicicd-cli/cli/
 
 # download Boomi installers

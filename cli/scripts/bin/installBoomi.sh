@@ -40,18 +40,6 @@ if [[ "$atomType" = "ATOM" ]]
 		./bin/installCloud.sh atomName="${atomName}" tokenId="${tokenId}" INSTALL_DIR="${INSTALL_DIR}" WORK_DIR="${WORK_DIR}" TMP_DIR="${TMP_DIR}" JRE_HOME="${JRE_HOME}" JAVA_HOME="${JAVA_HOME}" proxyHost="${proxyHost}" proxyPort="${proxyPort}" proxyUser="${proxyUser}" proxyPassword="${proxyPassword}"
 		source bin/updateSharedServer.sh atomName="${atomName}" overrideUrl=true url="${sharedWebURL}" apiType="${apiType}" auth="${apiAuth}"		
 		
-	elif [[ "$atomType" = "BROKER" ]]
-	then
-		ATOM_HOME=${INSTALL_DIR}/Broker_${atomName}
-		if [[ -d "${ATOM_HOME}" ]]
-		then
-			echo "${ATOM_HOME} exits. Will stop installation."
-			exit 0
-        fi
-		
-		source bin/installerToken.sh atomType=${atomType}
-		./bin/installBroker.sh atomName="${atomName}" tokenId="${tokenId}" INSTALL_DIR="${INSTALL_DIR}" WORK_DIR="${WORK_DIR}" TMP_DIR="${TMP_DIR}" JRE_HOME="${JRE_HOME}" JAVA_HOME="${JAVA_HOME}" proxyHost="${proxyHost}" proxyPort="${proxyPort}" proxyUser="${proxyUser}" proxyPassword="${proxyPassword}"
-		
 	elif [[ "$atomType" = "GATEWAY" ]]
 	then
 		ATOM_HOME=${INSTALL_DIR}/Gateway_${atomName}
