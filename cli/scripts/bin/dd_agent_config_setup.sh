@@ -21,7 +21,7 @@ cat <<EOF > /etc/datadog-agent/conf.d/process.d/conf.yaml
 init_config:
 
 instances:
-- name:${BOOMI_CONTAINERNAME}
+- name: ${BOOMI_CONTAINERNAME}
   search_string: ['com.boomi.container.core.Container']
   exact_match: False
 EOF
@@ -49,7 +49,7 @@ init_config:
 instances:
   - host: 127.0.0.1
     port: 5003
-    name:${BOOMI_CONTAINERNAME}
+    name: ${BOOMI_CONTAINERNAME}
 EOF
 
 chown dd-agent:dd-agent /etc/datadog-agent/conf.d/jmx.d/conf.yaml
