@@ -140,11 +140,12 @@ if [ "${platform}" = "aws" ]; then
     export region=${region}
     export DataDogAPIKey=${DataDogAPIKey}
     cd /home/$USR/boomi/boomicicd/boomicicd-cli/cli/scripts
+    echo "Mounting EFS"
     source bin/efsMount.sh efsMount=${EfsMount} platform=${platform} defaultAWSRegion=${region}
     #export authToken="BOOMI_TOKEN.$userName:$apiToken"
     export authToken=${authToken}
-	export client=${client}
-	export group=${group}
+    export client=${client}
+    export group=${group}
     source bin/init.sh atomType=${atomType} atomName="${atomName}" env="${boomiEnv}" classification=${classification} accountId=${accountId}	purgeHistoryDays=${purgeHistoryDays} maxMem=${maxMem} defaultRegion=${defaultRegion}
 else
     # GCP/Azure platforms
