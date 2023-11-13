@@ -105,7 +105,8 @@ if [ "${platform}" = "aws" ]; then
     echo "export AWS_DEFAULT_REGION=$EC2_REGION" >> .profile	
     source /home/$USR/.profile
 fi
-            
+
+echo "before entering the boomi installation loop-start"
 # set up local directories for install
 mkdir -p /mnt/boomi
 mkdir -p /usr/local/boomi/work
@@ -116,7 +117,7 @@ chown -R $USR:$GRP /home/$USR/
 chown -R $USR:$GRP /usr/local/boomi/
 chown -R $USR:$GRP /usr/local/bin/
 whoami
-echo "before entering the boomi installation loop"
+echo "before entering the boomi installation loop-end"
 
 # install boomi
 sudo -u $USR bash << EOF
