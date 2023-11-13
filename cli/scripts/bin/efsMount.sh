@@ -4,6 +4,7 @@ source bin/common.sh
 ARGUMENTS=(efsMount)
 OPT_ARGUMENTS=(mountPoint serviceUserName groupName defaultAWSRegion)
 authToken="BOOMI_TOKEN."
+platform="aws"
 inputs "$@"
 
 if [ "$?" -gt "0" ]
@@ -32,8 +33,8 @@ sudo mkdir -p "${mountPoint}"
 sudo mount -t efs -o tls ${efsMount}.efs.${defaultAWSRegion}.amazonaws.com:/ "${mountPoint}"
 sudo mkdir -p "${mountPoint}/boomi"
 
-sudo chown -R $serviceUserName "${mountPoint}"
-sudo chown -R $groupName "${mountPoint}"
+sudo chown -R $serviceUserName:$groupName "${mountPoint}"
+#sudo chown -R $groupName "${mountPoint}"
 
 ## update fstab
 if [ "${platform}" = "aws" ]; then

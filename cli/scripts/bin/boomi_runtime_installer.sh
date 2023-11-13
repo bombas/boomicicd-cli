@@ -140,7 +140,7 @@ if [ "${platform}" = "aws" ]; then
     export region=${region}
     export DataDogAPIKey=${DataDogAPIKey}
     cd /home/$USR/boomi/boomicicd/boomicicd-cli/cli/scripts
-    source bin/efsMount.sh efsMount=${EfsMount} defaultAWSRegion=${region}
+    source bin/efsMount.sh efsMount=${EfsMount} platform=${platform} defaultAWSRegion=${region}
     #export authToken="BOOMI_TOKEN.$userName:$apiToken"
     export authToken=${authToken}
 	export client=${client}
