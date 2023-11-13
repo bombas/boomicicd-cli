@@ -116,6 +116,7 @@ chown -R $USR:$GRP /home/$USR/
 chown -R $USR:$GRP /usr/local/boomi/
 chown -R $USR:$GRP /usr/local/bin/
 whoami
+echo "before entering the boomi installation loop"
 
 # install boomi
 sudo -u $USR bash << EOF
