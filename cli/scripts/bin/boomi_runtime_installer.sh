@@ -76,7 +76,7 @@ cd /home/$USR/boomi/boomicicd
 #git clone https://${githubToken}@github.com/UnitedTechnoCloud/boomicicd-cli
 git clone https://github.com/bombas/boomicicd-cli
 cd /home/$USR/boomi/boomicicd/boomicicd-cli/cli/
-#set +e
+set +e
 
 # download Boomi installers
 echo "download boomi installers..."
