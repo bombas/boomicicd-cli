@@ -109,23 +109,14 @@ fi
 echo "before entering the boomi installation loop-start"
 # set up local directories for install
 mkdir -p /mnt/boomi
-echo "1"
 mkdir -p /usr/local/boomi/work
-echo "2"
 mkdir -p /usr/local/boomi/tmp
-echo "3"
 mkdir -p /usr/local/bin
-echo "4"
 chown -R $USR:$GRP /mnt/boomi/
-echo "5"
 chown -R $USR:$GRP /home/$USR/
-echo "6"
 chown -R $USR:$GRP /usr/local/boomi/
-echo "7"
 chown -R $USR:$GRP /usr/local/bin/
-echo "8"
 whoami
-echo "before entering the boomi installation loop-end"
 
 # install boomi
 sudo -u $USR bash << EOF
