@@ -31,7 +31,7 @@ fi
 
 sudo mkdir -p "${mountPoint}"
 sudo chown -R $serviceUserName:$groupName "${mountPoint}"
-sudo mount -t efs -o tls ${efsMount}.efs.${defaultAWSRegion}.amazonaws.com:/ "${mountPoint}"
+#sudo mount -t efs -o tls ${efsMount}.efs.${defaultAWSRegion}.amazonaws.com:/ "${mountPoint}"
 sudo mkdir -p "${mountPoint}/boomi"
 
 #sudo chown -R $groupName "${mountPoint}"
